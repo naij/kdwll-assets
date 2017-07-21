@@ -1,0 +1,375 @@
+body {
+  background-color: #f6f6f6;
+}
+
+.wrap {
+  width: @layout-width;
+  margin: 0 auto;
+}
+
+.sitenav {
+  background-color: #444;
+  height: 35px;
+  line-height: 35px;
+
+  .sitenav-user {
+    float: left;
+    color: #fff;
+  }
+  .sitenav-site {
+    float: right;
+
+    li {
+      margin-left: 25px;
+
+      a {
+        color: #fff;
+      }
+    }
+  }
+  .menu {
+    float: left;
+    position: relative;
+    z-index: 2;
+
+    &:hover {
+      .menu-panel {
+        display: block;
+      }
+    }
+
+    .menu-trigger {
+      cursor: pointer;
+
+      .arrow {
+        font-size: 12px;
+        margin-left: 10px;
+        line-height: 1;
+      }
+    }
+    .menu-panel {
+      display: none;
+      width: 100%;
+      min-width: 120px;
+      position: absolute;
+      left: 0;
+      background-color: #000;
+      background-color: rgba(0, 0, 0, 0.8);
+      font-size: 12px;
+    }
+    .menu-item {
+      display: block;
+      padding: 10px;
+      line-height: 1.5;
+      color: #fff;
+
+      &:hover {
+        background-color: @color-brand;
+      }
+    }
+  }
+}
+
+.header {
+  background-color: #fff;
+  padding: 30px 0 30px;
+
+  .head-bd {
+    position: relative;
+  }
+  .head-logo {
+    float: left;
+    width: 172px;
+    height: 40px;
+    @bg1: "//kiwipics.b0.upaiyun.com/c/1e53a2764b4d7fd365f3e781b232cb4d.png";
+    @bg2: "//kiwipics.b0.upaiyun.com/c/1e53a2764b4d7fd365f3e781b232cb4d.png";
+    .retina(@bg1, @bg2);
+    margin-right: 20px;
+  }
+  .sub-title {
+    float: left;
+    color: #333;
+    height: 30px;
+    line-height: 30px;
+    font-size: 20px;
+    border-left: 1px solid #dcdcdc;
+    padding-left: 20px;
+    margin-top: 5px;
+  }
+  .search-group {
+    float: left;
+    margin-left: 103px;
+
+    .search-group-input {
+      position: relative;
+      float: left;
+
+      .search-inp {
+        width: 400px;
+        height: 36px;
+        line-height: 36px;
+        font-size: 14px;
+        padding: 0 35px 0 20px;
+        vertical-align: middle;
+        background-color: #FFF;
+        border-color: @color-brand;
+        border-width: 2px;
+        border-style: solid;
+        outline: none;
+        .border-radius(4px 0 0 4px);
+
+        &:hover {
+          background-color: rgba(32, 32, 64, 0.04);
+        }
+        &:focus {
+          background-color: #fff;
+        }
+      }
+      .del {
+        position: absolute;
+        right: 15px;
+        top: 11px;
+        font-size: 14px;
+        color: #ccc;
+
+        &:hover {
+          color: @color-brand;
+        }
+      }
+    }
+    .search-group-btn {
+      float: left;
+      position: relative;
+      font-size: 0;
+      white-space: nowrap;
+      vertical-align: middle;
+      .search-btn {
+        height: 40px;
+        font-size: 14px;
+        border: none;
+        .border-radius(0 4px 4px 0);
+        width: 96px;
+        text-align: center;
+      }
+    }
+    .suggest.dropdown .dropdown-menu {
+      display: block;
+      width: 400px;
+      margin-top: 0;
+      padding: 0;
+      li {
+        padding: 5px 0px;
+        a{
+          background-color: transparent;
+          padding: 3px 20px;
+        }
+        &.active {
+          background-color: #EDEDF0;
+          a {
+            color: #FF5500;
+          }
+        }
+      }
+    }
+  }
+}
+.header-manage {
+  .search-group {
+    float: right;
+    margin-top: 4px;
+    
+    .search-group-input {
+      .search-inp {
+        background-color: #FFF;
+        border-color: #D3D3DB;
+        border-width: 1px;
+        height: 30px;
+        width: 225px;
+        font-size: 12px;
+
+        &:focus {
+          border-color: @color-brand;
+        }
+      }
+    }
+    .search-group-btn {
+      .search-btn {
+        height: 32px;
+      }
+    }
+    .suggest.dropdown {
+      .dropdown-menu {
+        width: 225px;
+      }
+    }
+  }
+}
+
+.main-nav {
+  background-color: #444;
+
+  .nav-wrap {
+    float: left;
+
+    li {
+      float: left;
+
+      a {
+        float: left;
+        height: 40px;
+        line-height: 40px;
+        color: #fff;
+        font-size: 16px;
+        font-weight: bold;
+        padding: 0 30px;
+
+        &:hover {
+          background-color: @color-brand;
+        }
+      }
+
+      &.active {
+        a {
+          background-color: @color-brand;
+        }
+      }
+    }
+  }
+  .login-wrap {
+    float: right;
+    
+    li {
+      float: left;
+      line-height: 40px;
+      color: #fff;
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    .menu {
+      position: relative;
+
+      &:hover {
+        .menu-panel {
+          display: block;
+        }
+      }
+
+      .menu-trigger {
+        cursor: pointer;
+        
+        .arrow {
+          font-size: 12px;
+          margin-left: 10px;
+          line-height: 1;
+        }
+      }
+      .menu-panel {
+        display: none;
+        width: 100%;
+        min-width: 120px;
+        position: absolute;
+        background-color: #000;
+        background-color: rgba(0, 0, 0, 0.8);
+        font-size: 12px;
+        right: 0;
+      }
+      .menu-item {
+        display: block;
+        padding: 10px;
+        line-height: 1.5;
+        color: #fff;
+
+        &:hover {
+          background-color: @color-brand;
+        }
+      }
+    }
+  }
+}
+
+.content {
+  width: @layout-width;
+  min-height: 1000px;
+  margin: 0 auto;
+}
+.act-content {
+  width: auto;
+}
+.manage-content {
+  position: relative;
+  padding-top: 30px;
+
+  .sidenav {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 140px;
+
+    li {
+      font-size: 12px;
+      margin-bottom: 10px;
+
+      &.active {
+        a {
+          color: @color-brand;
+        }
+      }
+    }
+  }
+  .inner-main {
+    background-color: #fff;
+    min-height: 460px;
+    margin-left: 140px;
+    padding: 20px;
+  }
+}
+
+.footer {
+  background-color: #444;
+
+  .footer-slogan {
+    float: right;
+    color: #fff;
+    text-align: center;
+  }
+  .footer-logo {
+    width: 172px;
+    height: 40px;
+    @bg1: "//kiwipics.b0.upaiyun.com/c/ce55db65b7af05b0ba31726989a1c4ee.png";
+    @bg2: "//kiwipics.b0.upaiyun.com/c/ce55db65b7af05b0ba31726989a1c4ee.png";
+    .retina(@bg1, @bg2);
+    margin-bottom: 10px;
+  }
+  .footer-bd {
+    padding: 20px 0;
+  }
+  .footer-links {
+    border-bottom: 1px solid #777;
+    padding-bottom: 10px;
+    margin-right: 200px;
+    margin-bottom: 20px;
+
+    a {
+      color: #fff;
+      margin-right: 20px;
+    }
+  }
+  .footer-license {
+    color: #ddd;
+    font-size: 12px;
+  }
+}
+
+/* 面包屑 */
+.breadcrumbs {
+  padding: 20px 0;
+  color: @color-m;
+}
+
+
+/* 404 */
+.status-404 {
+  width: 400px;
+  margin: 80px auto;
+}

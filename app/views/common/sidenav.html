@@ -1,0 +1,7 @@
+<ul>
+  {{#for(item in menuList)}}
+  <li t-class:active="item.active">
+    <a href="{{item.path}}">{{item.name}}</a>
+  </li>
+  {{/for}}
+</ul>
